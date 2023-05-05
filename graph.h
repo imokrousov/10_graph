@@ -1,7 +1,9 @@
 #include <vector>
-
+#include <set>
+#include <iostream>
 using namespace std;
-
+#ifndef GRAPH_H
+#define GRAPH_H
 
 struct Edge{
 	int from,to;
@@ -13,12 +15,13 @@ struct Graph{
 	vector<Edge> edges;
 	int e_count, v_count;
 };
+int **make_array(unsigned int);
+void delete_array(int **, unsigned int);
+Edge make_e (int , int , int  );
+Graph make_g (int ** , int );
+Graph make_g (const vector<Edge>  & );
+Graph make_g (const vector<pair<int,int>>  & );
+void print_edge (const Edge & );
+void print_graph(const Graph & , bool );
 
-Edge make_e (int _from, int _to, int _weight = 0 );
-Graph make_g (int ** m, int n);
-Graph make_g (const vector<Edge>  & es);
-Graph make_g (const vector<pair<int,int>>  & es);
-void print_edge (const Edge & e);
-void print_graph(const Graph & g, bool is_matrix = true);
-
-
+#endif 
