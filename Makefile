@@ -7,6 +7,7 @@ main_exec: ./build/graph.o main.cpp
 ./build/graph.o: graph.cpp
 	mkdir -p ./build/
 	g++ -o ./build/graph.o -c graph.cpp
+
 clean:
 	rm -rf *.o
 
