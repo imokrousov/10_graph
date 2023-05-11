@@ -1,5 +1,12 @@
-first: main.cpp hello.cpp
-	g++ -o hello hello.cpp main.cpp
+setup: compile-lib compile-exec 
+	g++ -o main main.o graph.o
 
-second: 
-	echo "Haha$(\n)"
+compile-lib:
+	g++ -c -o graph.o graph.cpp
+
+compile-exec:
+	g++ -c -o main.o main.cpp
+
+clean:
+	rm graph.o
+	rm main.o
