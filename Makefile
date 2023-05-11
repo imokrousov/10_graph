@@ -1,5 +1,10 @@
-first: main.cpp hello.cpp
-	g++ -o hello hello.cpp main.cpp
+all: main_exec
 
-second: 
-	echo "Haha$(\n)"
+main_exec: ./build/graph.o main.cpp
+	mkdir -p ./build/
+	g++ -o ./build/main_exec main.cpp ./build/graph.o
+
+./build/graph.o: graph.cpp
+	mkdir -p ./build/
+	g++ -o ./build/graph.o -c graph.cpp
+
