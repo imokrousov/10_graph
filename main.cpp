@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "graph.h"
 
 using namespace std;
