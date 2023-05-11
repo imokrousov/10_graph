@@ -1,4 +1,6 @@
 #include <vector>
+#include <iostream>
+#include <set>
 
 using namespace std;
 
@@ -14,6 +16,7 @@ struct Graph{
 	int e_count, v_count;
 };
 
+int ** make_matrix(int n);
 Edge make_e (int _from, int _to, int _weight = 0 );
 Graph make_g (int ** m, int n);
 Graph make_g (const vector<Edge>  & es);
