@@ -1,11 +1,11 @@
-setup: compile-lib compile-exec 
+main: graph.o main.o
 	g++ -o main main.o graph.o
 
-compile-lib:
-	g++ -c -o graph.o graph.cpp
+graph.o: graph.cpp
+	g++ -c graph.cpp -o graph.o 
 
-compile-exec:
-	g++ -c -o main.o main.cpp
+main.o: main.cpp
+	g++ -c main.cpp -o main.o 
 
 clean:
 	rm graph.o
