@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-#include <iostream>
-#include "graph.h"
-
-using namespace std;
-
-int main(){
-	return 0;
-=======
 ﻿#include <iostream>
 #include "graph.h"
 
@@ -64,5 +55,4 @@ int main() {
         cout << endl;
         for (int i = 0; i < graph.e_count; i++) print_edge(graph.edges[i]);
     }
->>>>>>> master
 }
