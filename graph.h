@@ -2,9 +2,9 @@
 
 using namespace std;
 
-
 struct Edge{
-	int from,to;
+	int from;
+	int to;
 	int weight;
 };
 
@@ -20,5 +20,4 @@ Graph make_g (const vector<Edge>  & es);
 Graph make_g (const vector<pair<int,int>>  & es);
 void print_edge (const Edge & e);
 void print_graph(const Graph & g, bool is_matrix = true);
-
 
