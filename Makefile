@@ -1,5 +1,9 @@
-first: main.cpp hello.cpp
-	g++ -o hello hello.cpp main.cpp
+main.o: main.cpp
+	g++ -c main.cpp -o main.o
 
-second: 
-	echo "Haha$(\n)"
+graph.o: graph.cpp
+	g++ -c graph.cpp -o graph.o 
+
+clean:
+	rm -rf *.o 
+	rm -rf *.exe
