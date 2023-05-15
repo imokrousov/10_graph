@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 struct Edge{
 	int from,to;
 	int weight;
